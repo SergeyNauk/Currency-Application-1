@@ -1,0 +1,15 @@
+caption {
+  color: indigo;
+  font-size: 2rem;}
+
+table {
+  border-collapse: collapse;
+  margin-left: 25%;
+  width: 50%;
+  border: 3px solid grey;
+  font-size: 2rem;
+  text-align: center;
+  background-color: indigo;
+  color: white;}
+
+th, td {border: 1px solid grey;}

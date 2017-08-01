@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<header>
+  <div class="content-item">
+    <span>
+    Hi, in order to use the application, it is necessary to read the instruction for its use, for details click on this button =>
+      <button class="openSideBar" type="button" md-button (click)="sidenav.open()">
+      INSTRUCTION
+      </button>
+    </span>
+  </div>
+
+  <button class="menu-services" md-button [mdMenuTriggerFor]="menu">Menu</button>
+  <md-menu #menu="mdMenu">
+    <a routerLink='/currency-converter'>Currency converter</a><br>
+    <a routerLink='/show-exchange-rates'>Show exchange rates</a><br>
+    <a routerLink='**'>At home</a>
+  </md-menu>
+
+
+</header>
+
+<md-sidenav-container class="example-container">
+  <md-sidenav #sidenav class="example-sidenav">
+   <p>To use the service of transferring the amount from one currency to another, go to the menu and use "Currency converter" If you want to see the fresh rates of major currencies, click on the menu and use the "Show exchange rates"</p>
+  </md-sidenav>
+</md-sidenav-container>
+
+<router-outlet></router-outlet>
+
+
+
+
+
+

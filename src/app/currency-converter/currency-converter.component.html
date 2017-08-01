@@ -1,0 +1,29 @@
+<div>
+<md-select [(ngModel)]="firstCurrency" (click)="firstCurrItem" placeholder="Yours currency" >
+  <md-option value='UAH'>UAH</md-option>
+  <md-option *ngFor="let nameCurrency of currencyValue" [value]="nameCurrency.ccy" >
+    {{ nameCurrency.ccy}}
+  </md-option>
+</md-select>
+
+<!--currencyValue!-->
+
+<md-select [(ngModel)]="secondCurrency"  (click)="secondCurrItem" placeholder="Currency for calculate">
+  <md-option value='UAH'>UAH</md-option>
+  <md-option *ngFor="let nameCurrency of currencyValue" [value]="nameCurrency.ccy" >
+    {{ nameCurrency.ccy}}
+  </md-option>
+</md-select>
+
+
+<md-input-container>
+  <input mdInput placeholder="Input yours sum" [(ngModel)]="sumOfuser" >
+</md-input-container>
+
+<button md-button (click)="calculate()">Calculate</button><br>
+</div>
+
+  <app-calculate [sum]="sumOfuser" [koef]="mainKoef"></app-calculate>
+
+
+
